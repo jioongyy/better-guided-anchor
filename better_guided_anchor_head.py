@@ -176,9 +176,7 @@ class BetterGuidedAnchorHead(nn.Module):
             self.feat_channels,
             self.feat_channels,
             kernel_size=3,
-            deformable_groups=self.deformable_groups,
-            use_grid_bbox=self.use_grid_points,
-            gradient_mul=self.gradient_mul)
+            deformable_groups=self.deformable_groups)
         self.conv_cls = MaskedConv2d(self.feat_channels,
                                      self.cls_out_channels,
                                      1)
